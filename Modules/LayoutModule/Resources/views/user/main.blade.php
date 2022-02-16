@@ -51,7 +51,6 @@
 <body>
         <div id="app">
                 <div class="main-wrapper main-wrapper-1">
-                        <!-- @include('layoutmodule::user.sidebar') -->
 
                         @yield('content')
                         <!-- Main Content -->
