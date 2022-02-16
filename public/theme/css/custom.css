@@ -1,0 +1,128 @@
+/**
+ *
+ * You can write your CSS code here, DO NOT touch the default JavaScript file
+ * because it will make it harder for you to update.
+ * 
+ */
+
+/*# sourceMappingURL=custom.css.map */
+.logo{
+    display: block;
+    text-align: center;
+
+}
+.logo_font{
+    font-family: 'Courgette', cursive;
+    text-transform: none;
+    line-height: normal;
+    letter-spacing: normal;
+}
+/* .card .card-header h4 {
+    font-size: 16px;
+    line-height: 28px;
+    color: #6777ef;
+} */
+
+.badge {
+    cursor: default;
+}
+
+.check_icon {
+    font-size: 18px;
+}
+
+.fa-size {
+    font-size: x-large;
+    color: #34395e;
+}
+th .fab ,#icon{ 
+    font-size: medium;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 0.85em;
+    white-space: nowrap;
+}
+
+.card .card-header h4, h2, h3, h1 {
+    /* font-size: 16px; */
+    line-height: 28px;
+    color: #6777ef;
+}
+
+.profile-widget .profile-widget-picture {
+    margin: -25px 0px 0 10px;
+    /* padding-left: 20px; */
+ }
+ .table-responsive .table tr{
+     border-bottom: 1px solid #f2f2f2;
+ }
+ .accordion .accordion-header{
+     cursor: default;
+ }
+ h2 .fas,.fab{
+     font-size: x-large;
+ }
+
+
+ .modal-backdrop {
+   
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+
+ 
+}
+.modal {
+    background-color: rgba(0, 0, 0, 0.404);
+}
+
+
+
+.dataTables_paginate .paging_simple_numbers .page-item.disabled .page-link {
+    border-color: transparent;
+    background-color: #f9fafe;
+    color: #6777ef;
+    opacity: .6;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #6777ef;
+    border-color: #6777ef;
+}
+.iziToast{
+    min-width: 500px;
+    margin-top: 7%;
+}
+
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+ }
+
+ .calendar-time::before{
+
+    font-weight: bold;
+    color: #6777ef;
+    content: "Time: ";  
+ }
+ .daterangepicker .calendar-time{
+    text-align: left;
+    padding-left: 0%;
+ }
+ .calendar-table::before{
+    font-weight: bold;
+    color: #6777ef;
+    content: "Date: ";
+ }
+
+ .card .card-header .form-control {
+        border-radius: .2rem;
+        height: auto;
+ }
+
+
+#no_border{
+    border: none;
+}
+ 
