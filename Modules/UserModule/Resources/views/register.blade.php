@@ -22,29 +22,29 @@
                         <div class="row">
                             <div class="form-group col-6">
                                 <label for="fname">First Name</label>
-                                <input id="fname" type="text" class="form-control" name="fname"  autofocus="">
+                                <input id="fname" type="text" class="form-control" name="fname" autofocus="">
                             </div>
                             <div class="form-group col-6">
                                 <label for="lname">Last Name</label>
-                                <input id="lname" type="text" class="form-control" name="lname" >
+                                <input id="lname" type="text" class="form-control" name="lname">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-6">
                                 <label for="username">Username</label>
-                                <input id="username" type="text" class="form-control" name="username" >
+                                <input id="username" type="text" class="form-control" name="username">
                             </div>
 
                             <div class="form-group col-6">
                                 <label for="password" class="d-block">Password</label>
-                                <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password" >
+                                <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="form-group col-6">
                                 <label for="phone">Phone</label>
-                                <input id="phone" type="text" class="form-control" name="phone" >
+                                <input id="phone" type="text" class="form-control" name="phone">
                             </div>
                         </div>
 
@@ -85,8 +85,8 @@
                 </form>
             </div>
         </div>
-        
+
     </div>
 </div>
-</div>
+
 @endsection

@@ -4,13 +4,15 @@
 <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-        <title> <i class="fab fa-twitter"></i>|Twitter Checker</title>
 
         <!-- General CSS Files -->
         <link rel="stylesheet" href="{{asset('theme/modules/bootstrap/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('theme/modules/fontawesome/css/all.min.css')}}">
+        <link rel="shortcut icon" type="image/png" href="{{ url('theme/img/logo.png') }}"/>
+  <title>Twitter Checker</title>
 
         <!-- CSS Libraries -->
+        <link rel="stylesheet" href="{{asset('theme/modules/fontawesome/css/all.min.css')}}">
+
         <link rel="stylesheet" href="{{asset('theme/modules/jqvmap/dist/jqvmap.min.css')}}">
         <link rel="stylesheet" href="{{asset('theme/modules/summernote/summernote-bs4.css')}}">
         <link rel="stylesheet" href="{{asset('theme/modules/owlcarousel2/dist/assets/owl.carousel.min.css')}}">
@@ -49,13 +51,12 @@
 <body>
         <div id="app">
                 <div class="main-wrapper main-wrapper-1">
-                        @include('layoutmodule::user.nav')
-                        @include('layoutmodule::user.sidebar')
+                        <!-- @include('layoutmodule::user.sidebar') -->
 
+                        @yield('content')
                         <!-- Main Content -->
                         <div class="main-content">
                                 <section class="section">
-                                        @yield('content')
                                 </section>
                         </div>
                         @include('layoutmodule::user.footer')

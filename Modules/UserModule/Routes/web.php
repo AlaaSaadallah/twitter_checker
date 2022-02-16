@@ -17,6 +17,7 @@ Route::get('/', 'UserModuleController@index')->name('user.login');
 Route::get('register', 'UserModuleController@register')->name('user.register');
 Route::post('store', 'UserModuleController@store')->name('user.account.store');
 Route::post('login', 'UserModuleController@login')->name('user.account.login');
+Route::get('profile', 'UserModuleController@profile')->name('user.profile');
 
 Route::prefix('user')->group(function() {
 });

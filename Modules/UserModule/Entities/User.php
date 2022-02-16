@@ -11,6 +11,15 @@ class User extends  Authenticatable
 {
     protected $guarded = [];
 
-   
+    public function getImageFullPathAttribute()
+    {
+        if ($this->attributes['profile_image']) {
+            return asset('/uploads/users/' . $this->attributes['profile_image']);
+        } else {
+            return asset('theme/img/logo.png');
+
+                //  return asset('theme/img/no_img.jpg');
+        }
+    }
 
 }

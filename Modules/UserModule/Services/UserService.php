@@ -33,6 +33,8 @@ class UserService
     }
     public function findOne($id)
     {
+
+        // dd($id);
         return $this->userRepository->find($id);
     }
 
@@ -68,7 +70,7 @@ class UserService
         // dd($user_data)->toArray();
         $user_data['password'] = bcrypt($user_data['password']);
     
-
+// dd($user_data);
         return $this->userRepository->create($user_data);
     }
 

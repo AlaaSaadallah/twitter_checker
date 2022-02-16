@@ -6,123 +6,60 @@
  */
 
 /*# sourceMappingURL=custom.css.map */
-.logo{
+.logo {
     display: block;
     text-align: center;
 
 }
-.logo_font{
+.icon{
+    font-size: xx-large;
+}
+.logo_font {
     font-family: 'Courgette', cursive;
     text-transform: none;
     line-height: normal;
     letter-spacing: normal;
 }
-/* .card .card-header h4 {
-    font-size: 16px;
-    line-height: 28px;
-    color: #6777ef;
-} */
 
-.badge {
-    cursor: default;
+.main-content {
+    padding-top: 2%;
 }
 
-.check_icon {
-    font-size: 18px;
+.username {
+    font-family: 'Courgette', cursive;
+    font-size: 44px;
 }
-
-.fa-size {
-    font-size: x-large;
-    color: #34395e;
+.main-sidebar, .main-sidebar-right{
+    width: 30%;
+    z-index: -1;
 }
-th .fab ,#icon{ 
-    font-size: medium;
+.navbar{
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    top:0px;
 }
-
-div.dataTables_wrapper div.dataTables_info {
-    padding-top: 0.85em;
-    white-space: nowrap;
+.sidebar-brand, .sidebar-wrapper, .main-sidebar .sidebar-style-2, .main-sidebar-right .sidebar-style-2{
+    padding-top: 30%;
 }
+.main-sidebar-right {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+    position: fixed;
+    top: 0;
+    height: 100%;
 
-.card .card-header h4, h2, h3, h1 {
-    /* font-size: 16px; */
-    line-height: 28px;
-    color: #6777ef;
+    /* width: 250px; */
+    background-color: #fff;
+    /* z-index: 880; */
+    right: 0;
 }
+.main-sidebar-right .sidebar-brand {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;}
 
-.profile-widget .profile-widget-picture {
-    margin: -25px 0px 0 10px;
-    /* padding-left: 20px; */
- }
- .table-responsive .table tr{
-     border-bottom: 1px solid #f2f2f2;
- }
- .accordion .accordion-header{
-     cursor: default;
- }
- h2 .fas,.fab{
-     font-size: x-large;
- }
-
-
- .modal-backdrop {
-   
-    display: none;
-    background-color: rgba(255, 255, 255, 0);
-
- 
-}
-.modal {
-    background-color: rgba(0, 0, 0, 0.404);
-}
-
-
-
-.dataTables_paginate .paging_simple_numbers .page-item.disabled .page-link {
-    border-color: transparent;
-    background-color: #f9fafe;
-    color: #6777ef;
-    opacity: .6;
-}
-
-
-.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current {
-    background-color: #6777ef;
-    border-color: #6777ef;
-}
-.iziToast{
-    min-width: 500px;
-    margin-top: 7%;
-}
-
-.inactiveLink {
-    pointer-events: none;
-    cursor: default;
- }
-
- .calendar-time::before{
-
-    font-weight: bold;
-    color: #6777ef;
-    content: "Time: ";  
- }
- .daterangepicker .calendar-time{
-    text-align: left;
-    padding-left: 0%;
- }
- .calendar-table::before{
-    font-weight: bold;
-    color: #6777ef;
-    content: "Date: ";
- }
-
- .card .card-header .form-control {
-        border-radius: .2rem;
-        height: auto;
- }
-
-
-#no_border{
-    border: none;
-}
- 
+    li{
+        list-style: none;
+    }

@@ -25,6 +25,11 @@ class UserModuleController extends Controller
         return view('usermodule::login');
     }
 
+    public function profile()
+    {
+        $user = Auth::user();
+        return view('usermodule::profile', compact('user'));
+    }
 
     function login(Request $request)
     {
@@ -35,7 +40,7 @@ class UserModuleController extends Controller
         // dd($request->all());
         if (Auth::attempt($credentials)) {
 
-            return redirect()->route("user.register");
+            return redirect()->route("user.profile");
         }
         return redirect()->back()->withErrors(['error' => 'Wrong Username or Password']);
     }
@@ -76,9 +81,9 @@ class UserModuleController extends Controller
                 ->withInput();
         }
         $user = $this->userService->create($request->all()); // add to database action
-        if($user){
+        if ($user) {
             return redirect()->route("user.login")
-            ->with('success', 'New Account Created Successfully');
+                ->with('success', 'New Account Created Successfully');
         }
     }
 

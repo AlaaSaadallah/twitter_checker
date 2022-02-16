@@ -17,9 +17,9 @@
                 </div>
 
                 <div class="card-body">
-               
-                <form action="{{route('user.account.login')}}" method="POST">
-                @csrf
+
+                    <form action="{{route('user.account.login')}}" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label for="username">Username</label>
                             <input id="username" type="text" class="form-control" name="username" tabindex="1" required="" autofocus="">
