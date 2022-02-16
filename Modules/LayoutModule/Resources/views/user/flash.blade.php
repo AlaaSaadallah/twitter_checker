@@ -1,23 +1,32 @@
 @if ($errors->any())
 <div>
+    <?php
+    // echo "flash";
+    ?>
     <!-- <strong>{{ __('messages.Error') }} !</strong> -->
     <ul>
         @foreach ($errors->all() as $error)
-        <input type="hidden" value="{{$error}}" id="message">
+     
+        <input type="hidden" value="{{$error}}" id="message" name="error[]">
         <!-- <li>{{ $error }}</li> -->
         @push('scripts')
         <script>
             $(document).ready(function() {
-                var message = $("#message").val();
-                // alert(message)
-                iziToast.error({
+                // console.log(inps.value)
+                $("input[name='error[]']").each(function(){
+                    console.log($(this))
+                      iziToast.error({
                     title: "Error",
-                    message: message,
+                    message: $(this).val(),
                     timeout: 5000,
                     position: 'topRight',
                     progressBar: true,
 
                 })
+               }   
+
+             )
+
             })
         </script>
         @endpush

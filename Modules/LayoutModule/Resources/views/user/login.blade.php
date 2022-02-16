@@ -21,8 +21,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"> <!-- Start GA -->
-
+    
     <!-- Template CSS -->
+    <link rel="stylesheet" href="{{asset('theme/modules/izitoast/css/iziToast.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('theme/css/components.css')}}">
     <!-- Start GA -->
@@ -61,12 +62,15 @@
     <script src="{{asset('theme/js/stisla.js')}}"></script>
 
     <!-- JS Libraies -->
+    <script src="{{asset('theme/modules/izitoast/js/iziToast.min.js')}}"></script>
 
     <!-- Page Specific JS File -->
+    <script src="{{asset('theme/js/page/modules-sweetalert.js')}}"></script>
 
     <!-- Template JS File -->
     <script src="{{asset('theme/js/scripts.js')}}"></script>
     <script src="{{asset('theme/js/custom.js')}}"></script>
+    @stack('scripts')
 
 </body>
 

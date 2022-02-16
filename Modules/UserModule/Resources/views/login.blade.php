@@ -1,6 +1,8 @@
 @extends('layoutmodule::user.login')
 
 @section('content')
+@include('layoutmodule::user.flash')
+
 <div class="container mt-5">
     <div class="row">
         <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
@@ -15,10 +17,12 @@
                 </div>
 
                 <div class="card-body">
-                    <form method="POST" action="#" class="needs-validation" novalidate="">
+               
+                <form action="{{route('user.account.login')}}" method="POST">
+                @csrf
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input id="username" type="text" class="form-control" name="user" tabindex="1" required="" autofocus="">
+                            <input id="username" type="text" class="form-control" name="username" tabindex="1" required="" autofocus="">
                             <div class="invalid-feedback">
                                 Please enter your username
                             </div>

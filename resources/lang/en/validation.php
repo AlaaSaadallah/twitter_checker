@@ -144,6 +144,7 @@ return [
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
+           
         ],
     ],
 
@@ -158,6 +159,14 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        "fname" => "First Name",
+        "lname" => "Last Name",
+        "username" => "Username",
+        "password" => "Password",
+        "phone" => "Phone",
+        "gender" => "Gender",
+        'profile_image' => 'Profile Image',
+    ],
 
 ];
