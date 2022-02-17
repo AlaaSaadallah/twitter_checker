@@ -1,4 +1,5 @@
 {
     "LayoutModule": true,
-    "UserModule": true
+    "UserModule": true,
+    "FeedbackModule": true
 }

@@ -33,41 +33,42 @@ class UserModuleController extends Controller
     public function profile()
     {
         $user = Auth::user();
-        $tweets = '';
-        $account_data='';
+     
         $querier = FacadeTwitter::forApiV2()->getQuerier();
         $result = $querier
             ->withOAuth2Client()
             ->get('users/by/username/' . $user->username);
-        if ($result->data) {
+        // dd($result->errors);
+        if ($result->errors) {
+            return view('usermodule::profile', compact('user'));
+        } else if ($result->data) {
             $user_params = [
                 'user.fields' => 'profile_image_url,url,username',
                 'tweet.fields' => 'author_id,text,created_at',
                 TwitterContract::KEY_RESPONSE_FORMAT => TwitterContract::RESPONSE_FORMAT_JSON,
             ];
             $account_data = JsonResponse::fromJsonString(FacadeTwitter::getUserByUsername($user->username, $user_params))->getData();
-// dd($account_data);
+            // dd($account_data);
             $params = [
                 'place.fields' => 'country,name',
-                'tweet.fields' => 'author_id,geo',
+                'tweet.fields' => 'author_id,created_at',
                 'expansions' => 'author_id,in_reply_to_user_id',
                 TwitterContract::KEY_RESPONSE_FORMAT => TwitterContract::RESPONSE_FORMAT_JSON,
             ];
 
             $tweets = JsonResponse::fromJsonString(FacadeTwitter::userTweets($result->data->id, $params))->getData();
-        //    dd((($tweets->meta->result_count)));
-        if($tweets->meta->result_count<1 ){
-          
-
-        }else {
-            $tweet = $tweets->data[0]->text;
-        }
+            //    dd((($tweets->meta->result_count)));
+            if ($tweets->meta->result_count < 1) {
+            } else {
+                // dd($tweets->data[0]);
+                $tweet = $tweets->data[0];
+            }
 
 
             //    dd($tweets->data[0]->text);
+        } else {
         }
-
-        return view('usermodule::profile', compact('user', 'result', 'tweet','account_data'));
+        return view('usermodule::profile', compact('user', 'result', 'tweet', 'account_data'));
     }
 
     function login(Request $request)
@@ -126,44 +127,11 @@ class UserModuleController extends Controller
         }
     }
 
-    /**
-     * Show the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function show($id)
+    function logout(Request $request)
     {
-        return view('usermodule::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function edit($id)
-    {
-        return view('usermodule::edit');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     * @param Request $request
-     * @param int $id
-     * @return Renderable
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     * @param int $id
-     * @return Renderable
-     */
-    public function destroy($id)
-    {
-        //
+        Auth::logout();
+        $request->session()->flush();
+        $request->session()->regenerate();
+        return redirect()->route('user.login');
     }
 }
