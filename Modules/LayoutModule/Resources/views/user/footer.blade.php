@@ -2,9 +2,9 @@
 
 <footer class="main-footer">
         <div class="footer-left">
-        All copyrights reserved &copy;  {{date('Y')}} <div class="bullet"></div> <img class="brand-logo" alt="logo" style="height: 30px" src="{{ url('admin_assets/assets/images/logo.png') }}">
+        All copyrights reserved &copy;  {{date('Y')}} <div class="bullet"></div> alaa.saadallah96@gmail.com
         </div>
         <div class="footer-right">
-
+Alaa Saadallah
         </div>
 </footer>

@@ -52,10 +52,10 @@
         <div id="app">
                 <div class="main-wrapper main-wrapper-1">
 
-                        @yield('content')
                         <!-- Main Content -->
-                        <div class="main-content">
+                        <div class="main-content mt-0">
                                 <section class="section">
+                                        @yield('content')
                                 </section>
                         </div>
                         @include('layoutmodule::user.footer')
